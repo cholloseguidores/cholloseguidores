@@ -1,9 +1,10 @@
+/* Estilos básicos */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    text-align: center; /* Centrar la página */
+    text-align: center;
 }
 
 header {
@@ -28,7 +29,7 @@ header .animated {
 
 .container {
     display: flex;
-    justify-content: center; /* Centrar contenido */
+    justify-content: center; /* Centrar el contenido */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
 }
@@ -43,7 +44,7 @@ header .animated {
 }
 
 .package:hover {
-    transform: scale(1.05); /* Añadir efecto de escala */
+    transform: scale(1.05); /* Efecto de hover */
 }
 
 .package h2 {
@@ -56,11 +57,11 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
 }
 
 .green-check {
-    color: green; /* Asegurar que las marcas de verificación sean verdes */
+    color: green; /* Asegurarse de que las marcas de verificación sean verdes */
 }
 
 button {
@@ -90,7 +91,7 @@ footer {
     padding: 10px;
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
-    text-align: center; /* Centrar texto */
+    text-align: center;
 }
 
 footer .business-hours {
@@ -99,5 +100,17 @@ footer .business-hours {
     color: black; /* Color de la fuente negro para mejorar la legibilidad */
     padding: 5px; /* Reducir tamaño del recuadro */
     display: inline-block; /* Ajuste al contenido */
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 4px;
+}
+
+/* Media queries para adaptarse a diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambiar a formato vertical para dispositivos móviles */
+    }
+    
+    .package {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        margin-bottom: 20px; /* Espacio entre paquetes */
+    }
 }
