@@ -4,6 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
     text-align: center; /* Centrar la página */
+    overflow-x: hidden; /* Evita desbordamientos */
 }
 
 header {
@@ -37,6 +38,7 @@ header .animated {
 @media (min-width: 768px) {
     .container {
         flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
+        align-items: stretch; /* Ajustar la altura para que todos tengan la misma altura */
     }
 }
 
@@ -46,7 +48,7 @@ header .animated {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 100%; /* Ajustar el ancho para dispositivos móviles */
+    flex: 1; /* Permite que cada paquete tenga el mismo tamaño */
 }
 
 .package:hover {
@@ -79,7 +81,6 @@ button {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-    width: 100%; /* Ajustar el ancho para dispositivos móviles */
 }
 
 button:hover {
@@ -99,13 +100,13 @@ footer {
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
     text-align: center; /* Centrar texto */
+    overflow-x: hidden; /* Evita desbordamientos */
 }
 
 footer .business-hours {
-    background: pink; /* Fondo rosa claro */
     font-size: 0.7em; /* Tamaño de la fuente más pequeño */
-    color: black; /* Fuente negra para mejorar legibilidad */
+    color: white; /* Color blanco para mejorar visibilidad */
     padding: 5px; /* Espacio reducido */
-    display: inline-block; /* Ajustar al contenido */
+    display: inline-block;
     border-radius: 4px; /* Bordes redondeados */
 }
