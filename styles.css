@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
     text-align: center; /* Centrar la página */
-    overflow-x: hidden; /* Evitar desbordamientos horizontales */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 header {
@@ -14,31 +14,31 @@ header {
 }
 
 header .animated {
-    font-size: 3em;
+    font-size: 2em; /* Tamaño más pequeño para móviles */
     animation: fadeIn 2s ease-in-out; /* Animación */
 }
 
 @keyframes fadeIn {
-    from:
+    from {
         opacity: 0;
-    to:
+    }
+    to {
         opacity: 1;
+    }
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* Para versión móvil */
+    flex-direction: column; /* Adaptable para versión móvil */
     justify-content: center; /* Centrar contenido */
-    align-items: center; /* Alinear al centro para evitar espacio vacío */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
-    width: 100%; /* Asegurar que ocupa todo el ancho */
+    width: 100%; /* Asegura que ocupe todo el ancho del viewport */
 }
 
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Para versión de escritorio */
-        align-items: stretch; /* Asegura altura consistente */
+        flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
     }
 }
 
@@ -47,9 +47,8 @@ header .animated {
     border: 2px solid #333;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Asegura que los paquetes ocupen todo el ancho */
     transition: transform 0.3s ease;
-    flex-basis: 100%; /* Ocupar todo el ancho en versión móvil */
-    flex-grow: 1; /* Permitir crecimiento para asegurar tamaños iguales */
 }
 
 .package:hover {
@@ -76,7 +75,7 @@ ul li {
 button {
     background-color: #333;
     color: white;
-    padding: 12px; /* Relleno adicional */
+    padding: 12px; /* Más relleno */
     border: none;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
@@ -85,14 +84,14 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
-    color: black; /* Cambiar color para mejorar legibilidad */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado de dorado a verde claro */
+    color: black; /* Cambio de color de fuente para mejorar la legibilidad */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Más sombra */
 }
 
 button:active {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Mantener degradado */
-    color: black; /* Mantener color para legibilidad */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
+    color: black; /* Mantener el color de la fuente para mejorar la legibilidad */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Sombra reducida */
 }
 
@@ -101,13 +100,14 @@ footer {
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
     text-align: center; /* Centrar texto */
-    width: 100%; /* Asegurar que ocupa todo el ancho */
 }
 
 footer .business-hours {
-    font-size: 0.7em;
-    color: white; /* Color de fuente blanco para mejorar visibilidad */
-    padding: 5px; /* Relleno reducido */
+    background: pink; /* Fondo rosa claro */
+    font-size: 0.7em; /* Tamaño de la fuente más pequeño */
+    color: white; /* Fuente blanca para mejorar la legibilidad */
+    padding: 5px; /* Espacio reducido */
     display: inline-block; /* Ajustar al contenido */
     border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
 }
