@@ -29,7 +29,7 @@ header .animated {
 
 .container {
     display: flex;
-    justify-content: center; /* Centrar el contenido */
+    justify-content: center; /* Centrar contenido */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
 }
@@ -95,9 +95,9 @@ footer {
 }
 
 footer .business-hours {
-    background: pink; /* Fondo rosa claro */
-    font-size: 0.7em; /* Reducir tamaño de la fuente */
-    color: black; /* Color de la fuente negro para mejorar la legibilidad */
+    background: rosa; /* Fondo rosa claro */
+    font-size: 0.7em; /* Reducir tamaño del recuadro */
+    color: negro; /* Color de la fuente negro para mejorar la legibilidad */
     padding: 5px; /* Reducir tamaño del recuadro */
     display: inline-block; /* Ajuste al contenido */
     border-radius: 4px;
