@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    text-align: center;
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    text-align: center; 
+    overflow-x: hidden; 
     box-sizing: border-box; /* Asegura que el padding y borde no causen desbordamiento */
 }
 
@@ -12,23 +12,23 @@ header {
     padding: 20px;
     background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
     color: white;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    width: 100%; 
 }
 
 .container {
     display: flex;
-    flex-direction: row; /* Paquetes uno al lado del otro en escritorio */
-    justify-content: center; /* Centrar contenido */
-    gap: 10px; /* Espacio entre paquetes */
-    padding: 20px; /* Espacio interno del contenedor */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    box-sizing: border-box; /* Evita desbordamiento */
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 20px; 
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Paquetes uno debajo del otro en móviles */
-        align-items: center; /* Centrar contenido */
+        flex-direction: column; 
+        align-items: center; 
     }
 }
 
@@ -37,29 +37,24 @@ header {
     border: 2px solid #333;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s; /* Efecto suave al hacer hover */
-    box-sizing: border-box; /* Evita desbordamiento */
-    width: 300px; /* Ancho fijo para todos los paquetes en escritorio */
+    transition: transform 0.3s; 
+    box-sizing: border-box; 
+    width: 90%; /* Ancho del 90% para paquetes */
+    margin: 0 auto; /* Centrado */
 }
 
 .package:hover {
-    transform: scale(1.05); /* Efecto de escala */
-}
-
-@media (max-width: 768px) {
-    .package {
-        width: 100%; /* Ancho completo para los paquetes en móviles */
-    }
+    transform: scale(1.05); 
 }
 
 button {
     background-color: #333;
     color: white;
-    padding: 12px; /* Más relleno */
+    padding: 12px; 
     border: none;
-    border-radius: 8px; /* Bordes redondeados */
-    cursor: pointer; /* Indica que es un botón interactivo */
-    width: 100%; /* Ancho completo para los botones */
+    border-radius: 8px; 
+    cursor: pointer; 
+    width: 100%; 
 }
 
 button:hover {
@@ -72,8 +67,8 @@ footer {
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
     text-align: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    box-sizing: border-box; /* Evita desbordamiento */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 ul {
@@ -83,10 +78,10 @@ ul {
 
 .green-check {
     color: green; 
-    font-weight: bold; /* Negrita para visibilidad */
+    font-weight: bold; 
 }
 
 li {
-    text-align: left; /* Alineación izquierda para mejor legibilidad */
-    padding: 5px; /* Espacio entre elementos */
+    text-align: left; 
+    padding: 5px; 
 }
