@@ -29,6 +29,7 @@ header {
     .container {
         flex-direction: column; 
         align-items: center; 
+        gap: 20px; /* Aumentar el espacio entre paquetes en móviles */
     }
 }
 
@@ -39,8 +40,8 @@ header {
     text-align: center;
     transition: transform 0.3s; 
     box-sizing: border-box; 
-    width: 90%; /* Ancho del 90% para paquetes */
-    margin: 0 auto; /* Centrado */
+    width: 100%; /* Ajustar al 100% del ancho */
+    margin: 0 auto; /* Asegurar que se mantenga centrado */
 }
 
 .package:hover {
