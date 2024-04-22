@@ -40,6 +40,23 @@ header {
     transform: scale(1.05); /* Efecto de escala */
 }
 
+/* Estilos para los símbolos de verificación "✔" */
+.green-check {
+    color: green; /* Color verde para el símbolo de verificación */
+    font-weight: bold; /* Acentúa la visibilidad del símbolo */
+}
+
+/* Estilos para listas que eliminan marcadores por defecto y muestran solo "✔" */
+ul {
+    list-style-type: none; /* Elimina los marcadores predeterminados de lista */
+    padding: 0; /* Elimina el padding de la lista */
+}
+
+li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    text-align: left; /* Alinea los elementos a la izquierda para mejor legibilidad */
+}
+
 button {
     background-color: #333;
     color: white;
