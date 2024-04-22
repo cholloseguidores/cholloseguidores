@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    text-align: center; /* Centrar la página */
+    text-align: center;
 }
 
 header {
@@ -13,8 +13,8 @@ header {
 }
 
 header .animated {
-    font-size: 3em;
-    animation: fadeIn 2s ease-in-out; /* Animación */
+    font-size: 3em; /* Tamaño por defecto para escritorio */
+    animation: fadeIn 2s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -26,17 +26,24 @@ header .animated {
     }
 }
 
+/* Cambia el tamaño del encabezado según el tamaño de la pantalla */
+@media (max-width: 600px) {
+    header .animated {
+        font-size: 2em; /* Reduce el tamaño de la fuente en dispositivos móviles */
+    }
+}
+
 .container {
     display: flex;
-    flex-direction: column; /* Adaptable para versión móvil */
+    flex-direction: column; /* Por defecto, disposición vertical */
     justify-content: center; /* Centrar contenido */
-    gap: 20px; /* Espacio entre columnas */
+    gap: 20px; /* Espacio entre elementos */
     padding: 20px;
 }
 
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
+        flex-direction: row; /* En escritorio, disposición horizontal */
     }
 }
 
@@ -45,24 +52,27 @@ header .animated {
     border: 2px solid #333;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Ancho completo para versión móvil */
     transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .package {
+        width: 30%; /* En escritorio, cada paquete ocupa un tercio del ancho */
+    }
 }
 
 .package:hover {
     transform: scale(1.05); /* Efecto de escala */
 }
 
-.package h2 {
-    color: #333;
-}
-
 ul {
-    list-style: none; /* Sin puntos de lista */
+    list-style: none; /* Eliminar puntos de lista */
     padding: 0;
 }
 
 ul li {
-    margin-bottom: 10px; /* Espacio entre elementos de lista */
+    margin-bottom: 10px; /* Espaciado entre elementos de lista */
 }
 
 .green-check {
@@ -81,14 +91,14 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado de dorado a verde claro */
-    color: black; /* Cambio de color de fuente para mejorar la legibilidad */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Más sombra */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Cambia a dorado a verde claro gradiante */
+    color: black; /* Cambia el color de la fuente para mejorar la legibilidad */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Aumenta la sombra */
 }
 
 button:active {
     background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
-    color: black; /* Mantener el color de la fuente para mejorar la legibilidad */
+    color: black; /* Mantiene el color de la fuente para mejorar la legibilidad */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Sombra reducida */
 }
 
@@ -96,14 +106,14 @@ footer {
     padding: 10px;
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
-    text-align: center; /* Centrar texto */
+    text-align: center;
 }
 
 footer .business-hours {
     background: pink; /* Fondo rosa claro */
     font-size: 0.7em; /* Tamaño de la fuente más pequeño */
-    color: black; /* Fuente negra para mejorar legibilidad */
+    color: black; /* Fuente negra para mejorar la legibilidad */
     padding: 5px; /* Espacio reducido */
-    display: inline-block; /* Ajustar al contenido */
+    display: inline-block; /* Ajuste al contenido */
     border-radius: 4px; /* Bordes redondeados */
 }
