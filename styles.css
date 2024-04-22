@@ -5,8 +5,6 @@ body {
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
     text-align: center; /* Centrar la página */
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
-    width: 100vw; /* Ajusta el ancho al viewport para evitar espacios vacíos */
-    height: 100vh; /* Ajusta el alto al viewport para tener una proporción 9:16 */
 }
 
 header {
@@ -38,17 +36,27 @@ header .animated {
     width: 100%; /* Asegura que ocupe todo el ancho del viewport */
 }
 
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
+    }
+}
+
 .package {
     background: white;
     border: 2px solid #333;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
     width: 100%; /* Asegura que los paquetes ocupen todo el ancho */
+    transition: transform 0.3s ease;
 }
 
 .package:hover {
     transform: scale(1.05); /* Efecto de escala */
+}
+
+.package h2 {
+    color: #333;
 }
 
 ul {
@@ -68,17 +76,30 @@ button {
     background-color: #333;
     color: white;
     padding: 12px; /* Más relleno */
+    border: none;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
+button:hover {
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado de dorado a verde claro */
+    color: black; /* Cambio de color de fuente para mejorar la legibilidad */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Más sombra */
+}
+
+button:active {
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
+    color: black; /* Mantener el color de la fuente para mejorar la legibilidad */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Sombra reducida */
+}
+
 footer {
     padding: 10px;
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
-    text-align: center;
+    text-align: center; /* Centrar texto */
 }
 
 footer .business-hours {
@@ -87,6 +108,6 @@ footer .business-hours {
     color: white; /* Fuente blanca para mejorar la legibilidad */
     padding: 5px; /* Espacio reducido */
     display: inline-block; /* Ajustar al contenido */
-    border-radius: 4px; 
-    width: 100%;
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
 }
