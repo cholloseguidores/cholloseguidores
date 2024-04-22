@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
     text-align: center; /* Centrar la página */
-    overflow-x: hidden; /* Evita desbordamientos */
+    overflow-x: hidden; /* Evitar desbordamientos horizontales */
 }
 
 header {
@@ -29,7 +29,7 @@ header .animated {
 
 .container {
     display: flex;
-    flex-direction: column; /* Adaptable para versión móvil */
+    flex-direction: column; /* Para versión móvil */
     justify-content: center; /* Centrar contenido */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
@@ -37,8 +37,8 @@ header .animated {
 
 @media (min-width: 768px) {
     .container {
-        flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
-        align-items: stretch; /* Ajustar la altura para que todos tengan la misma altura */
+        flex-direction: row; /* Para versión de escritorio */
+        align-items: stretch; /* Asegura altura consistente */
     }
 }
 
@@ -48,7 +48,7 @@ header .animated {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    flex: 1; /* Permite que cada paquete tenga el mismo tamaño */
+    flex: 1; /* Permitir que cada paquete tenga el mismo tamaño */
 }
 
 .package:hover {
@@ -75,7 +75,7 @@ ul li {
 button {
     background-color: #333;
     color: white;
-    padding: 12px; /* Más relleno */
+    padding: 12px; /* Relleno adicional */
     border: none;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
@@ -84,14 +84,14 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado de dorado a verde claro */
-    color: black; /* Cambio de color de fuente para mejorar la legibilidad */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
+    color: black; /* Cambiar color para mejorar legibilidad */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Más sombra */
 }
 
 button:active {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
-    color: black; /* Mantener el color de la fuente para mejorar la legibilidad */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Mantener degradado */
+    color: black; /* Mantener color para legibilidad */
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Sombra reducida */
 }
 
@@ -100,13 +100,12 @@ footer {
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
     text-align: center; /* Centrar texto */
-    overflow-x: hidden; /* Evita desbordamientos */
 }
 
 footer .business-hours {
-    font-size: 0.7em; /* Tamaño de la fuente más pequeño */
-    color: white; /* Color blanco para mejorar visibilidad */
-    padding: 5px; /* Espacio reducido */
-    display: inline-block;
+    font-size: 0.7em;
+    color: white; /* Color de fuente blanco para mejorar visibilidad */
+    padding: 5px; /* Relleno reducido */
+    display: inline-block; /* Ajustar al contenido */
     border-radius: 4px; /* Bordes redondeados */
 }
