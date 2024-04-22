@@ -1,10 +1,9 @@
-/* Estilos básicos */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    text-align: center;
+    text-align: center; /* Centrar la página */
 }
 
 header {
@@ -29,9 +28,16 @@ header .animated {
 
 .container {
     display: flex;
+    flex-direction: column; /* Adaptable para versión móvil */
     justify-content: center; /* Centrar contenido */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Para versión de escritorio, los paquetes se alinean uno al lado del otro */
+    }
 }
 
 .package {
@@ -39,12 +45,11 @@ header .animated {
     border: 2px solid #333;
     padding: 20px;
     text-align: center;
-    width: 30%; /* Ajustar ancho para dar más espacio */
     transition: transform 0.3s ease;
 }
 
 .package:hover {
-    transform: scale(1.05); /* Efecto de hover */
+    transform: scale(1.05); /* Efecto de escala */
 }
 
 .package h2 {
@@ -52,22 +57,22 @@ header .animated {
 }
 
 ul {
-    list-style: none; /* Eliminar puntos al inicio de cada párrafo */
+    list-style: none; /* Sin puntos de lista */
     padding: 0;
 }
 
 ul li {
-    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    margin-bottom: 10px; /* Espacio entre elementos de lista */
 }
 
 .green-check {
-    color: green; /* Asegurarse de que las marcas de verificación sean verdes */
+    color: green; /* Marca de verificación verde */
 }
 
 button {
     background-color: #333;
     color: white;
-    padding: 12px; /* Añadir más relleno */
+    padding: 12px; /* Más relleno */
     border: none;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
@@ -76,41 +81,29 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #FFD700, #7CFC00); /* Cambia a dorado a verde claro gradiante */
-    color: black; /* Cambia el color de la fuente para mejorar la legibilidad */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Aumenta la sombra */
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado de dorado a verde claro */
+    color: black; /* Cambio de color de fuente para mejorar la legibilidad */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Más sombra */
 }
 
 button:active {
     background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
-    color: black; /* Mantiene el color de la fuente para mejorar la legibilidad */
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Disminuye la sombra */
+    color: black; /* Mantener el color de la fuente para mejorar la legibilidad */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Sombra reducida */
 }
 
 footer {
     padding: 10px;
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
-    text-align: center;
+    text-align: center; /* Centrar texto */
 }
 
 footer .business-hours {
-    background: rosa; /* Fondo rosa claro */
-    font-size: 0.7em; /* Reducir tamaño del recuadro */
-    color: negro; /* Color de la fuente negro para mejorar la legibilidad */
-    padding: 5px; /* Reducir tamaño del recuadro */
-    display: inline-block; /* Ajuste al contenido */
-    border-radius: 4px;
-}
-
-/* Media queries para adaptarse a diferentes tamaños de pantalla */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Cambiar a formato vertical para dispositivos móviles */
-    }
-    
-    .package {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        margin-bottom: 20px; /* Espacio entre paquetes */
-    }
+    background: pink; /* Fondo rosa claro */
+    font-size: 0.7em; /* Tamaño de la fuente más pequeño */
+    color: black; /* Fuente negra para mejorar legibilidad */
+    padding: 5px; /* Espacio reducido */
+    display: inline-block; /* Ajustar al contenido */
+    border-radius: 4px; /* Bordes redondeados */
 }
