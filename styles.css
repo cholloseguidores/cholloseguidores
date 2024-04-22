@@ -3,7 +3,10 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
-    text-align: center;
+    text-align: center; /* Centrar la página */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    width: 100vw; /* Ajusta el ancho al viewport para evitar espacios vacíos */
+    height: 100vh; /* Ajusta el alto al viewport para tener una proporción 9:16 */
 }
 
 header {
@@ -13,8 +16,8 @@ header {
 }
 
 header .animated {
-    font-size: 3em; 
-    animation: fadeIn 2s ease-in-out; 
+    font-size: 2em; /* Tamaño más pequeño para móviles */
+    animation: fadeIn 2s ease-in-out; /* Animación */
 }
 
 @keyframes fadeIn {
@@ -28,10 +31,11 @@ header .animated {
 
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    gap: 20px; 
+    flex-direction: column; /* Adaptable para versión móvil */
+    justify-content: center; /* Centrar contenido */
+    gap: 20px; /* Espacio entre columnas */
     padding: 20px;
+    width: 100%; /* Asegura que ocupe todo el ancho del viewport */
 }
 
 .package {
@@ -40,33 +44,34 @@ header .animated {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 100%; /* Asegura que los paquetes ocupen todo el ancho */
 }
 
 .package:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Efecto de escala */
 }
 
 ul {
-    list-style: none; 
+    list-style: none; /* Sin puntos de lista */
     padding: 0;
 }
 
 ul li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* Espacio entre elementos de lista */
 }
 
 .green-check {
-    color: green;
+    color: green; /* Marca de verificación verde */
 }
 
 button {
     background-color: #333;
     color: white;
-    padding: 12px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    padding: 12px; /* Más relleno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
     cursor: pointer;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
 footer {
@@ -77,30 +82,11 @@ footer {
 }
 
 footer .business-hours {
-    background: pink; 
-    font-size: 0.7em; 
-    color: white; 
-    padding: 5px; 
-    display: inline-block; 
-    border-radius: 4px;
-}
-
-/* Ajustes para versión móvil */
-@media (max-width: 768px) { 
-    .container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .package {
-        width: 100%;
-    }
-
-    header .animated {
-        font-size: 2em; 
-    }
-
-    header, footer {
-        padding: 15px; /* Reduce el padding para coincidir con el ancho móvil */
-    }
+    background: pink; /* Fondo rosa claro */
+    font-size: 0.7em; /* Tamaño de la fuente más pequeño */
+    color: white; /* Fuente blanca para mejorar la legibilidad */
+    padding: 5px; /* Espacio reducido */
+    display: inline-block; /* Ajustar al contenido */
+    border-radius: 4px; 
+    width: 100%;
 }
