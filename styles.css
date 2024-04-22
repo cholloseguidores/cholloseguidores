@@ -19,20 +19,20 @@ header .animated {
 }
 
 @keyframes fadeIn {
-    from {
+    from:
         opacity: 0;
-    }
-    to {
+    to:
         opacity: 1;
-    }
 }
 
 .container {
     display: flex;
     flex-direction: column; /* Para versión móvil */
     justify-content: center; /* Centrar contenido */
+    align-items: center; /* Alinear al centro para evitar espacio vacío */
     gap: 20px; /* Espacio entre columnas */
     padding: 20px;
+    width: 100%; /* Asegurar que ocupa todo el ancho */
 }
 
 @media (min-width: 768px) {
@@ -48,7 +48,8 @@ header .animated {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    flex: 1; /* Permitir que cada paquete tenga el mismo tamaño */
+    flex-basis: 100%; /* Ocupar todo el ancho en versión móvil */
+    flex-grow: 1; /* Permitir crecimiento para asegurar tamaños iguales */
 }
 
 .package:hover {
@@ -100,6 +101,7 @@ footer {
     background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
     color: white;
     text-align: center; /* Centrar texto */
+    width: 100%; /* Asegurar que ocupa todo el ancho */
 }
 
 footer .business-hours {
