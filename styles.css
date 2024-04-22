@@ -16,13 +16,21 @@ header {
 
 .container {
     display: flex;
-    flex-direction: row; /* Alinear paquetes uno al lado del otro */
-    flex-wrap: wrap; /* Permite que se ajusten en dispositivos móviles */
+    flex-direction: row; /* Paquetes uno al lado del otro en escritorio */
+    flex-wrap: wrap; /* Permite ajustar en dispositivos móviles */
     justify-content: center; /* Centrar contenido */
-    gap: 10px; /* Reducir espacio entre paquetes */
+    gap: 10px; /* Espacio entre paquetes */
     padding: 20px; /* Espacio interno del contenedor */
     width: 100%; /* Asegura que ocupe todo el ancho del viewport */
     box-sizing: border-box; /* Evita desbordamientos no deseados */
+}
+
+/* Cambia el orden de los paquetes para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Paquetes uno debajo del otro en móviles */
+        align-items: center; /* Centrar contenido */
+    }
 }
 
 .package {
