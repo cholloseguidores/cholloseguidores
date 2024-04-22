@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CHOLLOSEGUIDORES.com</title>
+    <meta name="description" content="Cholloseguidores - Compra paquetes de 10.000, 50.000 y 100.000 seguidores para tu cuenta de redes sociales. Mejora tu presencia en línea con nuestros servicios confiables y rápidos.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="animated">CHOLLOSEGUIDORES.com</h1> <!-- Animación de entrada -->
+        <p>un servicio de calidad para crecer en Instagram ¡Actualmente somos los más rapidos del mercado!</p>
+    </header>
+    
+    <main class="container">
+        <div class="package">
+            <h2>10.000 SEGUIDORES</h2>
+            <ul>
+                <li><span class="green-check">✔</span> Ideal para iniciar tu marca personal en Instagram</li>
+                <li><span class="green-check">✔</span> Ideal para nuevas empresas y negocios online</li>
+                <li><span class="green-check">✔</span> Garantía de 365 días, a partir del día de compra</li>
+                <li><span class="green-check">✔</span> Método 100% seguro, no requiere contraseña</li>
+            </ul>
+            <button onclick="openWhatsApp('10,000')">LO QUIERO</button>
+        </div>
+        
+        <div class="package">
+            <h2>50.000 SEGUIDORES</h2>
+            <ul>
+                <li><span class="green-check">✔</span> Perfecto para convertirte en microinfluencer</li>
+                <li><span class="green-check">✔</span> Más de colaborar marcas y negocios pequeños, y tambien con otros microinfluencers</li>
+                <li><span class="green-check">✔</span> Garantía de 365 días, a partir del día de compra</li>
+                <li><span class="green-check">✔</span> Método 100% seguro, no requiere contraseña</li>
+            </ul>
+            <button onclick="openWhatsApp('50,000')">LO QUIERO</button>
+        </div>
+        
+        <div class="package">
+            <h2>100.000 SEGUIDORES</h2>
+            <ul>
+                <li><span class="green-check">✔</span> Ideal para ser un influencer de alto prestigio</li>
+                <li><span class="green-check">✔</span> Más oportunidades de colaborar con grandes marcas y otros influencers en campañas publicitarias</li>
+                <li><span class="green-check">✔</span> Garantía de 365 días, a partir del día de compra</li>
+                <li><span class="green-check">✔</span> Método 100% seguro, no requiere contraseña</li>
+            </ul>
+            <button onclick="openWhatsApp('100,000')">LO QUIERO</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="business-hours">
+            <p>Horario Comercial: Lunes - Viernes 9:00 - 14:00 / 16:00 - 22:00 <br>
+            Sábados y Domingo de 10:00 a 14:00</p>
+        </div>
+        <button onclick="contactUs()">¿Quieres trabajar con nosotros? Mándanos un mensaje</button>
+        <p>© 2024 www.cholloseguidores.com - Todos los derechos reservados.</p> <!-- Nota al pie -->
+    </footer>
+</body>
+</html>

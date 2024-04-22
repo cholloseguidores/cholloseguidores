@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
+    text-align: center; /* Centrar la página */
+}
+
+header {
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: white;
+}
+
+header .animated {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out; /* Animación */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrar contenido */
+    gap: 20px; /* Espacio entre columnas */
+    padding: 20px;
+}
+
+.package {
+    background: white;
+    border: 2px solid #333;
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Ajustar ancho para dar más espacio */
+    transition: transform 0.3s ease;
+}
+
+.package:hover {
+    transform: scale(1.05); /* Añadir efecto de escala */
+}
+
+.package h2 {
+    color: #333;
+}
+
+ul {
+    list-style: none; /* Eliminar puntos al inicio de cada párrafo */
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.green-check {
+    color: green; /* Asegurar que las marcas de verificación sean verdes */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px; /* Añadir más relleno */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Efecto 3D */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+button:hover {
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Cambia a dorado a verde claro gradiante */
+    color: black; /* Cambia el color de la fuente para mejorar la legibilidad */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 24px 0 rgba(0, 0, 0, 0.19); /* Aumenta la sombra */
+}
+
+button:active {
+    background: linear-gradient(to right, #FFD700, #7CFC00); /* Degradado dorado a verde claro */
+    color: black; /* Mantiene el color de la fuente para mejorar la legibilidad */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19); /* Disminuye la sombra */
+}
+
+footer {
+    padding: 10px;
+    background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+    color: white;
+    text-align: center; /* Centrar texto */
+}
+
+footer .business-hours {
+    background: pink; /* Fondo rosa claro */
+    font-size: 0.7em; /* Reducir tamaño de la fuente */
+    color: black; /* Color de la fuente negro para mejorar la legibilidad */
+    padding: 5px; /* Reducir tamaño del recuadro */
+    display: inline-block; /* Ajuste al contenido */
+    border-radius: 4px; /* Bordes redondeados */
+}
